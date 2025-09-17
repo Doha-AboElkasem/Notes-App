@@ -25,9 +25,9 @@ const Form = ({ onSubmit, folders = [] }) => {
       return;
     }
     setErrors({});
-    if (onSubmit) {
-      onSubmit({ title, content, folderId: selectedFolderId });
-    }
+        if (onSubmit) {
+            onSubmit({ title, content, folderId: Number(selectedFolderId) });
+        }
     setTitle("");
     setContent("");
     setSelectedFolderId(folders.length > 0 ? folders[0].id : "");

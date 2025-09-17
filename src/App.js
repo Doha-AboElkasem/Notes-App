@@ -50,6 +50,11 @@ function App() {
     setSelectedFolderId(id);
   };
 
+  // Show all notes when 'Total Notes' is clicked
+  const handleShowAllNotes = () => {
+    setSelectedFolderId('all');
+  };
+
   // Sidebar state for mobile
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
@@ -57,7 +62,7 @@ function App() {
   return (
     <Router>
       <div className="fixed top-0 left-0 w-full z-50">
-        <Navbar totalNotes={notes.length} />
+        <Navbar totalNotes={notes.length} onTotalNotesClick={handleShowAllNotes} />
         <div className="absolute top-4 left-4">
           <BurgerMenu onClick={toggleSidebar} />
         </div>
