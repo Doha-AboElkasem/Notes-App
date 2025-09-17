@@ -28,6 +28,79 @@
   color: #61dafb;
 }
 
+/* Modern Form Animations & Shadows */
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pop {
+  animation: popIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modern-shadow {
+  box-shadow: 0 4px 32px 0 rgba(60, 72, 88, 0.18), 0 1.5px 6px 0 rgba(60, 72, 88, 0.12);
+}
+
+.modern-input {
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s;
+  box-shadow: 0 1.5px 6px 0 rgba(60, 72, 88, 0.08);
+}
+.modern-input:focus, .modern-input:hover {
+  box-shadow: 0 4px 16px 0 rgba(60, 72, 88, 0.18);
+  background: #fff;
+  border-color: #6366f1;
+}
+.modern-btn {
+  box-shadow: 0 2px 16px 0 rgba(60, 72, 88, 0.18);
+  transition: box-shadow 0.3s, transform 0.2s, background 0.3s;
+}
+.modern-btn:hover, .modern-btn:focus {
+  box-shadow: 0 6px 32px 0 rgba(60, 72, 88, 0.22);
+  transform: scale(1.05) translateY(-2px);
+  background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
